@@ -1,0 +1,32 @@
+@import './header.scss';
+@import './sidebar.scss';
+@import './content.scss';
+
+* {
+  box-sizing: border-box;
+}
+.container {
+  display: grid; 
+  height: 100%;
+  grid-template: "s  h "
+                "s  c ";
+  grid-template-columns: 240px  1fr;
+  grid-template-rows: 200px 1fr;
+}
+
+
+@media (max-width: 768px) {
+  .container {
+    grid-template-columns: 104px 1fr;
+    grid-template-rows: 181px 1fr;
+  }
+}
+
+@media (max-width: 320px) {
+  .container {
+    grid-template: ". h "
+                  ". c ";
+    grid-template-columns:  12px 1fr;
+    grid-template-rows: 169px 1fr;
+  }
+}

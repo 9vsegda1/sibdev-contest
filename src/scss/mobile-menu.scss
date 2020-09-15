@@ -1,0 +1,182 @@
+
+
+@media (max-width: 768px) {
+
+  // left: 142;
+
+  label[for="sidebar__trigger"] {
+    /* critical positioning styles */
+
+    cursor: pointer;
+    & > svg.svg__one {
+      transition: left 0.3s ease-in-out;
+      position: fixed;
+      left: 104px; 
+      top: 0;  
+      
+      /* non-critical apperance styles */
+
+      height: 106px;
+      width: 48px;
+      
+      z-index: 10000;
+    }
+
+
+    & > svg.svg__two {
+
+    
+      position: fixed;
+      top: 43px;
+      left: 105px;
+      height: 20px;
+      width: 26px;
+      // background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1' x='0px' y='0px' width='26px' height='20px' viewBox='0 0 26 20' enable-background='new 0 0 26 20' xml:space='preserve'><rect rx='1' width='26' height='2'/><rect y='18' rx='1' width='26' height='2'/><rect y='9' rx='1' width='26' height='2'/></svg>");
+      // background-size: contain;
+      z-index: 100000;
+      transition: left 0.3s ease-in-out;
+    }
+    
+  }
+  
+  .sidebar__trigger + label, .content {
+    transition: left 0.3s ease-in-out;
+  }
+  .sidebar__trigger ~ .header {
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .sidebar__trigger:checked + label {
+    left: 250px;
+
+    & > svg.svg__one {
+      left: 246px;
+    }
+    & > svg.svg__two {
+      left: 247px;
+    }
+  }
+  
+  .sidebar__trigger:checked ~ .content {
+    left: 142px;    
+  }
+  .sidebar__trigger:checked ~ .header {
+    transform: translateX(142px);
+  }
+  
+  
+  .sidebar__trigger:checked ~ .sidebar {
+    transition: width 0.3s ease-in-out;
+    width: 246px;
+
+    & > .sidebar__logo > span {
+      display: inline;
+    }
+
+    & > .sidebar__menu > .menu__item > span {
+      display: inline;
+    }
+  }
+
+  .content {
+    position: relative;
+    top: 0;
+    
+    left: 0;
+    z-index: 1;
+  }
+
+}
+
+@media (max-width: 320px) {
+
+  // 180;
+
+  label[for="sidebar__trigger"] {
+    /* critical positioning styles */
+
+    cursor: pointer;
+    & > svg.svg__one {
+      transition: left 0.3s ease-in-out;
+      position: fixed;
+      left: 12px; 
+      top: 0;  
+      
+      /* non-critical apperance styles */
+
+      height: 106px;
+      width: 48px;
+      
+      z-index: 10000;
+    }
+
+
+    & > svg.svg__two {
+
+    
+      position: fixed;
+      top: 43px;
+      left: 15px;
+      height: 20px;
+      width: 26px;
+      // background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1' x='0px' y='0px' width='26px' height='20px' viewBox='0 0 26 20' enable-background='new 0 0 26 20' xml:space='preserve'><rect rx='1' width='26' height='2'/><rect y='18' rx='1' width='26' height='2'/><rect y='9' rx='1' width='26' height='2'/></svg>");
+      // background-size: contain;
+      z-index: 100000;
+      transition: left 0.3s ease-in-out;
+    }
+    
+  }
+  
+  .sidebar__trigger + label, .content {
+    transition: left 0.3s ease-in-out;
+  }
+  .sidebar__trigger ~ .header {
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .sidebar__trigger:checked + label {
+    left: 180px;
+
+    & > svg.svg__one {
+      left: 192px;
+    }
+    & > svg.svg__two {
+      left: 194px;
+    }
+  }
+  
+  .sidebar__trigger:checked ~ .content {
+    left: 180px;    
+  }
+  .sidebar__trigger:checked ~ .header {
+    transform: translateX(180px);
+  }
+  
+  
+  .sidebar__trigger:checked ~ .sidebar {
+    width: 192px;
+    transition: transform 0.3s ease-in-out;
+    transform: translateX(0);
+
+    & > .sidebar__logo > span {
+      display: inline;
+    }
+
+    & > .sidebar__menu > .menu__item > span {
+      display: inline;
+    }
+
+    & > .sidebar__menu > .menu__item > svg {
+      display: none;
+    }
+  }
+
+  .content {
+    position: relative;
+    top: 0;
+    
+    left: 0;
+    z-index: 1;
+  }
+
+}
